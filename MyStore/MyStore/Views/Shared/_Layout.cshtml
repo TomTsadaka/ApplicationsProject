@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shauli</title>
+    <link rel="stylesheet" href="~/Content/11.css" type="text/css" media="screen" />
+</head>
+
+<body>
+    <header>
+        <h1>Our Store</h1>
+    </header>
+
+
+    <audio controls muted hidden="1">
+        <source src="/Content/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <nav>
+        <!-- Navigation -->
+        <ul>
+            <!-- name of button, name of view, name of controller-->
+            <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
+            <li>@Html.ActionLink("Products", "Index", "Products")</li>
+            <li>@Html.ActionLink("Users", "Index", "Users")</li>
+            <!-- name of button, name of view, name of controller-->
+            <li><a href="#">Contact</a></li>
+            <li class="subscribe"><a href="#">Subscribe via. RSS</a></li>
+            
+        </ul>
+    </nav>
+    <section id="intro">
+        <!-- Introduction -->
+        <header>
+            <h2>Do you have questions for me?</h2>
+        </header>
+        <p>Here you can find our products.</p>
+        <img src="~/Content/images/intro_shauli.png" alt="Shauli" />
+    </section>
+
+    <div id="content">
+
+        <div id="mainContent">
+            <!--Render body is in mainContent div to keep alignment straight-->
+            @RenderBody()
+
+        </div>
+
+        <aside>
+            <section>
+                <header>
+                    <h3>Categories</h3>
+                </header>
+                <ul>
+                    <li><a href="#">Cosmetics</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Jewelry</a></li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>Usere</h3>
+                </header>
+                <ul>
+                    <li><a href="#">December 2008</a></li>
+                    <li><a href="#">January 2009</a></li>
+                    <li><a href="#">February 2009</a></li>
+                    <li><a href="#">March 2009</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <!-- Footer -->
+        <div>
+            <section id="about">
+                <header>
+                    <h3>About</h3>
+                </header>
+                <p>Made by Tom Tsadaka, Eial Gurbanov and Omer Gez</p>
+            </section>
+       <!--
+            <section id="blogroll">
+                <header>
+                    <h3>Blogroll</h3>
+                </header>
+                <ul>
+                    <li><a href="#">NETTUTS+</a></li>
+                    <li><a href="#">FreelanceSwitch</a></li>
+                </ul>
+            </section>
+       -->
+            
+            <section id="popular">
+                <header>
+                    <h3>Sort Products</h3>
+                </header>
+                <ul>
+                    <li><a href="#">Sort by price</a></li>
+                    <li><a href="#">Sort by name </a></li>
+                    
+                </ul>
+            </section>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
